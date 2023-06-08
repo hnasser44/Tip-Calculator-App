@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <main>
+    <header>
+      <img src="/images/logo.svg" alt="">
+    </header>
+
+
+    <div class="card">
+
+
+      <div class="card-left">
+        <div class="input-container">
+          <label for="bill">Bill</label>
+          <div>
+            <img src="/images/icon-dollar.svg" alt="">
+            <input type="text" placeholder="0" class="bill-input">
+          </div>
+        </div>
+        <div class="select-tip">
+          <label>Select Tip %</label>
+          <div class="tip-options">
+            <button data-tipPercentage="5">5%</button>
+            <button data-tipPercentage="10">10%</button>
+            <button data-tipPercentage="15">15%</button>
+            <button data-tipPercentage="25">25%</button>
+            <button data-tipPercentage="50">50%</button>
+            <input type="text" placeholder="Custom" class="custom-tipPercentage-input">
+          </div>
+        </div>
+        <div class="input-container" style="margin-top: 2.5rem;">
+          <label for="bill">Number of People</label>
+          <div>
+            <img src="/images/icon-person.svg" alt="">
+            <input type="text" placeholder="0" class="people-input">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card-right">
+        <div class="tip-amount">
+          <div>
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p class="tip-amount-val">$0.00</p>
+        </div>
+
+        <div class="tip-total">
+          <div>
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <p class="tip-total-val">$0.00</p>
+        </div>
+        <button>RESET</button>
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+  </main>
+
+
+</body>
+</html>

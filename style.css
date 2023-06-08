@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    background-color: var(--Light-grayish-cyan);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.card .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card .input-container label {
+    color: var(--Dark-grayish-cyan);
+    font-size: 1.2rem;
+}
+
+
+.card .input-container div {
+    display: flex;
+    align-items: center;
+}
+
+.card .input-container div input {
+    padding: .5rem;
+    direction: rtl;
+    width: 100%;
+    border: 2px solid transparent;
+    caret-color: var(--Dark-grayish-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    outline: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+    transition: border-color .3s ease-in-out;
+}
+
+.card .input-container div {
+    position: relative;
+}
+
+.card .input-container div img {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: .8rem;    
+}
+
+.card .input-container div input:hover, .card .input-container div input:focus {
+    border-color: var(--Dark-grayish-cyan);
+}
+
+.card .select-tip {
+    margin-top: 1.5rem;
+}
+
+.card .select-tip label {
+    color: var(--Dark-grayish-cyan);
+    font-size: 1.2rem;
+}
+
+.card .select-tip .tip-options {
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card .select-tip .tip-options button {
+    background-color: var(--very-dark-cyan);
+    border: none;
+    color: var(--White);
+    font-family: inherit;
+    border: 1px solid var(--Dark-grayish-cyan);
+    border-radius: 5px;
+    padding: .5rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.card .select-tip .tip-options input {
+    padding: .5rem;
+    direction: rtl;
+    width: 100%;
+    border: 2px solid transparent;
+    caret-color: var(--Dark-grayish-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    outline: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+    transition: border-color .3s ease-in-out;
+}
+
+.card .select-tip .tip-options input:hover, .card .select-tip .tip-options input:focus {
+    border-color: var(--Dark-grayish-cyan);
+}
+
+
+.card .select-tip .tip-options button:hover,.card .select-tip .tip-options button.active {
+    background-color: #85dcd1;
+    color: black;
+}
+
+.card .select-tip .tip-options input:hover, .card .select-tip .tip-options input:focus {
+    border-color: var(--Dark-grayish-cyan);
+}
+
+.card-right {
+    background-color: var(--very-dark-cyan);
+    color: var(--White);
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    padding: 2rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-right .tip-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-right .tip-amount p {
+    font-size: 1.2rem;
+}
+
+.card-right .tip-amount p:nth-child(2) {
+    font-size: 1rem;
+    color: var(--Grayish-cyan);
+    font-weight: 700;
+}
+
+.card-right .tip-amount .tip-amount-val, .card-right .tip-total .tip-total-val {
+    font-size: 2.3rem !important;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+    
+}
+
+
+.card-right .tip-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-right .tip-total p {
+    font-size: 1.2rem;
+}
+
+.card-right .tip-total p:nth-child(2)
+{
+    font-size: 1rem;
+    color: var(--Grayish-cyan);
+    font-weight: 700;
+}
+
+.card-right button {
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    color: var(--very-dark-cyan);
+    font-family: inherit;
+    border: 1px solid var(--Dark-grayish-cyan);
+    border-radius: 5px;
+    padding: .5rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.card-right button:hover {
+    background-color: var(--White);
+}
+
+@media all and (max-width:400px) 
+{
+
+    label {
+        font-size: .9rem !important;
+    }
+
+    .card .card-left .tip-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card .card-left .tip-options  button {
+        padding: .5rem 2rem;
+    }
+
+    .card .card-left .tip-options input {
+        font-size: 1rem;
+    }
+
+    .card .card-right .tip-amount p {
+        font-size: .8rem;
+    }
+
+    .card .card-right .tip-amount p:nth-child(2) {
+        font-size: .7rem;
+    }
+
+    .card .card-right .tip-amount .tip-amount-val, .card .card-right .tip-total .tip-total-val {
+        font-size: 1.5rem !important;
+    }
+
+    .card .card-right .tip-total p {
+        font-size: .8rem;
+    }
+
+    .card .card-right .tip-total p:nth-child(2)
+    {
+        font-size: .7rem;
+    }
+
+    .card .card-right button {
+        font-size: .9rem;
+        padding: .5rem 2rem;
+    }
+}
+
+@media all and (min-width: 1000px)
+{
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }   
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        max-width: 800px;
+    }
+
+    .card .card-right {
+        flex: 1 1 60%;
+        align-self: stretch;
+        gap: 4rem;
+    }
+
+
+    .card .card-left {
+        flex: 1 1 40%;
+    }
+
+    .card .card-left .tip-options input{
+        font-size: 1.2rem;
+    }
+
+    .card .card-left .tip-options input::placeholder {
+        font-size: .8rem;
+    }
+
+    .card .card-left .tip-options {
+        gap: .4rem;
+    }
+
+    .card .card-left .tip-options button {
+        padding: .5rem 2rem;
+    }
+
+   
+    
+}
